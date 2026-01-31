@@ -26,4 +26,5 @@ Project 1 Architecture:
     i. Go to terminal and type the below commands
 	      aws configure
 		    enter access key and other details
-    j. To test try aws s3 ls	
+    j. To test try aws s3 ls
+   
