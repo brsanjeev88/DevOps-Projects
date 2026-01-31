@@ -10,7 +10,7 @@ Project 1 Architecture:
    - Once it is in running state, copy the public ip address
    - From your laptop open your terminal (Moba Xterm or iTerm)  and type the below commands
   		ssh ubuntu@copied IP address - this command will give you Permission Denied because keypair is not used
-  	    ssh -i /Enter/the/Path/to/keyPair.pem/file ubuntu@copied IP address 
+		ssh -i /Enter/the/Path/to/keyPair.pem/file ubuntu@copied IP address 
   		Again you will get Permission Denied because permissions are too open
   	    chmod 600 /Enter/the/Path/to/keyPair.pem/file
   	    ssh -i /Enter/the/Path/to/keyPair.pem/file ubuntu@copied IP address
