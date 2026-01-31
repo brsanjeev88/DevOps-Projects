@@ -1,1 +1,11 @@
-
+Login to AWS console
+Search for EC2 and select EC2
+Click on launch Instance and create a free tier instance with default options. Also create a key pair and download it
+Once it is in running state, copy the public ip address
+From your laptop open your terminal (Moba Xterm or iTerm) and type the below commands ssh ubuntu@copied IP address - this command will give you Permission Denied because keypair is not used ssh -i /Enter/the/Path/to/keyPair.pem/file ubuntu@copied IP address Again you will get Permission Denied because permissions are too open chmod 600 /Enter/the/Path/to/keyPair.pem/file ssh -i /Enter/the/Path/to/keyPair.pem/file ubuntu@copied IP address
+Install AWS CLI from AWS CLI Documentation curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" sudo installer -pkg AWSCLIV2.pkg -target / Or sudo snap install aws-cli --classic Or sudo apt install awscli
+Go to AWS Console and navigate to Security Credentials under profile
+Navigate to Access Keys and create a new one and save it
+Go to terminal and type the below commands aws configure enter access key and other details
+To test try aws s3 ls
+At this point you should be seeing in your terminal as ubuntu@ip-Private-IP-Address:
